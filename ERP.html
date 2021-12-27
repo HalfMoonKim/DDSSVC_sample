@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>#</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap"
+    rel="stylesheet">
+  <!-- // Font -->
+
+  <!-- Script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <![endif]-->
+  <script src="https://kit.fontawesome.com/af449e2132.js" crossorigin="anonymous"></script>
+  <!-- // Script -->
+
+  <!-- Style -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- // Style -->
+
+  <script src="../js/common.js"></script>
+</head>
+
+<body>
+  <div id="wrapper" style="display: flex; flex-direction: column; justify-content: space-between;">
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <div class="header-left">
+          <a href="#" class="logo">DDS SVC</a>
+        </div>
+        <div class="header-right">
+          <div class="header-right-top">
+            <form name="frmSearchDdssvc">
+              <div class="box-search">
+                <input type="text" placeholder="무엇이든 검색하세요.">
+                <button><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+          <div class="header-right-bottom">
+            <nav class="gnb">
+              <ul>
+                <li><a href="./ERP.html">Home</a></li>
+                <li><a href="./Service.html">Customer</a></li>
+                <li><a href="./ERP.html">Supplier</a></li>
+                <li><a href="./UserPay.html">Employees</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- // Header -->
+
+    <!-- Main -->
+    <section id="home-main">
+      <div class="container">
+        <div class="home-box">
+          <button class="nav-customizing"><i class="fas fa-cog"></i></button>
+          <div class="swiper home-menu-slide">
+            <div class="swiper-wrapper home-nav">
+              <div class="swiper-slide home-menu">
+                <button class="tree-open">My Pages</button>
+              </div>
+              <div class="swiper-slide home-menu">
+                <button class="tree-open">A</button>
+              </div>
+              <div class="swiper-slide home-menu">
+                <button class="tree-open">B</button>
+              </div>
+              <div class="swiper-slide home-menu">
+                <button class="tree-open">C</button>
+              </div>
+              <div class="swiper-slide home-menu">
+                <button class="tree-open">D</button>
+              </div>
+              <div class="swiper-slide home-menu">
+                <button class="tree-open">E</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <ul class="tree-box">
+          <li class="tree-list">
+            <p class="tree-title">My Pages</p>
+            <div id="tree"></div>
+          </li>
+          <li class="tree-list">
+            <p class="tree-title">A</p>
+            <div id="tree02"></div>
+          </li>
+          <li class="tree-list">
+            <p class="tree-title">B</p>
+            <div id="tree03"></div>
+          </li>
+          <li class="tree-list">
+            <p class="tree-title">C</p>
+            <div id="tree04"></div>
+          </li>
+          <li class="tree-list">
+            <p class="tree-title">D</p>
+            <div id="tree05"></div>
+          </li>
+          <li class="tree-list">
+            <p class="tree-title">E</p>
+            <div id="tree06"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- // Main -->
+
+    <!-- Footer"" -->
+    <Footer id="footer">
+      <div class="container">
+        <div class="copy">
+          <p>Copyright © (주)도들샘. All rights reserved.</p>
+        </div>
+      </div>
+    </Footer>
+    <!-- // Footer -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>#</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap"
+    rel="stylesheet">
+  <!-- // Font -->
+
+  <!-- Script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <![endif]-->
+  <script src="https://kit.fontawesome.com/af449e2132.js" crossorigin="anonymous"></script>
+  <!-- // Script -->
+
+  <!-- Style -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <!-- // Style -->
+
+  <script src="../js/common.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- Login Page -->
+    <section class="login-box">
+      <div class="login-box__top">
+        <a href="#" class="top__version">DDSSVC 1.0.0</a>
+      </div>
+      <div class="login-box__main">
+        <div class="main__logo">
+          <a href="#" class="login-logo">DDS SVC</a>
+        </div>
+        <form class="main__login-form" name="login" method="GET" action="./ERP.html">
+          <div class="login-form__div radio-btn">
+            <div class="radio-div">
+              <input type="radio" id="erp" name="group" class="box__radio" value="erp" checked>
+              <label for="erp">ERP</label>
+            </div>
+            <div class="radio-div">
+              <input type="radio" id="svcGroup" name="group" class="box__radio" value="service">
+              <label for="svcGroup">Service</label>
+            </div>
+            <div class="radio-div">
+              <input type="radio" id="userPay" name="group" class="box__radio" value="userPay">
+              <label for="userPay">User Pay</label>
+            </div>
+          </div>
+          <div class="login-form__div">
+            <label for="company" class="login-form__label"><i class="far fa-building"></i> Code</label>
+            <input type="text" id="company" placeholder="회사 코드를 입력하세요." name="company" class="login-form__input">
+          </div>
+          <div class="login-form__div">
+            <label for="username" class="login-form__label"><i class="fas fa-user"></i> ID</label>
+            <input type="text" id="username" placeholder="아이디를 입력하세요." name="username" class="login-form__input">
+          </div>
+          <div class="login-form__div">
+            <label for="userpass" class="login-form__label"><i class="fas fa-key"></i> Password</label>
+            <input type="password" id="userpass" placeholder="패스워드를 입력하세요." name="userpass" class="login-form__input">
+          </div>
+          <div class="login-form__bottom">
+            <div class="bottom__link">
+              <a href="#">비밀번호를 잊으셨습니까?</a>
+            </div>
+            <div>
+              <button type="submit" class="login-submit">LOG IN</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="login-box__copy">
+        <p>Copyright © (주)도들샘. All rights reserved.</p>
+      </div>
+    </section>
+    <!-- // Login Page -->
+  </div>
+</body>
+
+</html>
