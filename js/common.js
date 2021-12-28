@@ -5,11 +5,11 @@ $(document).ready(function () {
         let loginForm = $('.login-form');
 
         if (groupVal === "erp") {
-            loginForm.attr("action", "./ERP.html");
+            loginForm.attr("action", "./home/ERP.html");
         } else if (groupVal === "service") {
-            loginForm.attr("action", "./Service.html");
+            loginForm.attr("action", "./home/Service.html");
         } else if (groupVal === "userPay") {
-            loginForm.attr("action", "./UserPay.html");
+            loginForm.attr("action", "./home/UserPay.html");
         };
     });
 
