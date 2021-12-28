@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
     content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>#</title>
+  <title>DDS SVC</title>
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,6 @@
   <!-- Script -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <![endif]-->
@@ -28,7 +27,6 @@
 
   <!-- Style -->
   <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="../css/common.css">
   <!-- // Style -->
 
@@ -36,54 +34,58 @@
 </head>
 
 <body>
-  <div id="wrapper">
+  <div id="wrapper" style="height: 100vh;">
     <!-- Login Page -->
-    <section class="login-box">
-      <div class="login-box__top">
-        <a href="#" class="top__version">DDSSVC 1.0.0</a>
+    <section class="login-wrapper">
+      <div class="login-version">
+        <p class="version">DDSSVC 1.0.0</p>
       </div>
-      <div class="login-box__main">
-        <div class="main__logo">
-          <a href="#" class="login-logo">DDS SVC</a>
+      <div class="login-box">
+        <div class="login-box-logo">
+          <a href="/" class="login-logo">DDS SVC</a>
         </div>
-        <form class="main__login-form" name="login" method="GET" action="./ERP.html">
-          <div class="login-form__div radio-btn">
+
+        <!-- Login Form -->
+        <form class="login-form" name="login" method="GET" action="./ERP.html">
+          <div class="login-form-box radio-btn">
             <div class="radio-div">
-              <input type="radio" id="erp" name="group" class="box__radio" value="erp" checked>
-              <label for="erp">ERP</label>
+              <input type="radio" id="erp" name="group" class="input-radio" value="erp" checked>
+              <label for="erp" class="radio-label">ERP</label>
             </div>
             <div class="radio-div">
-              <input type="radio" id="svcGroup" name="group" class="box__radio" value="service">
-              <label for="svcGroup">Service</label>
+              <input type="radio" id="svcGroup" name="group" class="input-radio" value="service">
+              <label for="svcGroup" class="radio-label">Service</label>
             </div>
             <div class="radio-div">
-              <input type="radio" id="userPay" name="group" class="box__radio" value="userPay">
-              <label for="userPay">User Pay</label>
+              <input type="radio" id="userPay" name="group" class="input-radio" value="userPay">
+              <label for="userPay" class="radio-label">User Pay</label>
             </div>
           </div>
-          <div class="login-form__div">
-            <label for="company" class="login-form__label"><i class="far fa-building"></i> Code</label>
-            <input type="text" id="company" placeholder="회사 코드를 입력하세요." name="company" class="login-form__input">
+          <div class="login-form-box">
+            <label for="company" class="login-input-label"><i class="far fa-building"></i> Code</label>
+            <input type="text" id="company" placeholder="회사 코드를 입력하세요." name="company" class="input-txt">
           </div>
-          <div class="login-form__div">
-            <label for="username" class="login-form__label"><i class="fas fa-user"></i> ID</label>
-            <input type="text" id="username" placeholder="아이디를 입력하세요." name="username" class="login-form__input">
+          <div class="login-form-box">
+            <label for="username" class="login-input-label"><i class="fas fa-user"></i> ID</label>
+            <input type="text" id="username" placeholder="아이디를 입력하세요." name="username" class="input-txt">
           </div>
-          <div class="login-form__div">
-            <label for="userpass" class="login-form__label"><i class="fas fa-key"></i> Password</label>
-            <input type="password" id="userpass" placeholder="패스워드를 입력하세요." name="userpass" class="login-form__input">
+          <div class="login-form-box">
+            <label for="userpass" class="login-input-label"><i class="fas fa-key"></i> Password</label>
+            <input type="password" id="userpass" placeholder="패스워드를 입력하세요." name="userpass" class="input-txt">
           </div>
-          <div class="login-form__bottom">
-            <div class="bottom__link">
+          <div class="login-form-bottom">
+            <div class="bottom-link">
               <a href="#">비밀번호를 잊으셨습니까?</a>
             </div>
             <div>
-              <button type="submit" class="login-submit">LOG IN</button>
+              <button type="submit" class="input-submit">LOG IN</button>
             </div>
           </div>
         </form>
+        <!-- // Login Form -->
+
       </div>
-      <div class="login-box__copy">
+      <div class="login-footer">
         <p>Copyright © (주)도들샘. All rights reserved.</p>
       </div>
     </section>

@@ -1,5 +1,5 @@
 /* Login */
-.login-box {
+.login-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,20 +8,20 @@
   height: 100%;
 }
 
-.login-box__top {
+.login-version {
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 2rem;
 }
 
-.top__version {
+.version {
   font-size: 1rem;
 }
 
-.top__version:hover {
+.version:hover {
   text-decoration: underline;
 }
 
-.login-box__main {
+.login-box {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -34,25 +34,19 @@
   box-shadow: 0 .1rem 1rem .1rem rgb(0 0 0 / 20%), 0 .1rem .2rem rgb(60 60 60 / 15%);;
 }
 
-.main__logo {
+.login-box-logo {
   position: relative;
   width: 100%;
   vertical-align: middle;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
   text-align: center;
 }
 
-.login-logo {
-  width: 100%;
-  font-size: 5rem;
-  font-weight: 700;
-}
-
-.login-box__top,
-.login-box__main {
-  margin-bottom: 2rem;
-}
-
-.login-form__div {
+.login-version,
+.login-box,
+.login-form-box {
   margin-bottom: 2rem;
 }
 
@@ -61,7 +55,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .radio-div {
@@ -69,21 +63,26 @@
   text-align: center;
 }
 
-.login-form__label {
+.radio-label {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.login-input-label {
   position: relative;
   display: inline-block;
   width: 10rem;
   vertical-align: middle;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.login-form__label::after {
+.login-input-label::after {
   content: ':';
   position: absolute;
   top: 0;
-  right: -.5rem;
+  right: -.7rem;
 }
 
-.login-form__input {
+.input-txt {
   width: 30rem;
   padding: 1rem;
   margin-left: 2rem;
@@ -91,22 +90,22 @@
   border-bottom: solid 1px rgba(180,180,180,.4);
 }
 
-.login-form__bottom{
+.login-form-bottom{
   margin-bottom: 0 !important;
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
 
-.bottom__link a {
+.bottom-link a {
   height: 4rem;
 }
 
-.bottom__link a:hover {
+.bottom-link a:hover {
   text-decoration: underline;
 }
 
-.login-submit {
+.input-submit {
   width: 10rem;
   height: 4rem;
   background: none;
@@ -118,11 +117,11 @@
   font-weight: 700;
 }
 
-.login-submit:hover {
+.input-submit:hover {
   box-shadow: 0 .1rem 1rem .1rem rgb(0 0 0 / 20%), 0 .1rem .2rem rgb(60 60 60 / 15%);;
 }
 
-.login-box__copy {
+.login-footer {
   font-size: 1.4rem;
   margin-top: 2rem;
 }

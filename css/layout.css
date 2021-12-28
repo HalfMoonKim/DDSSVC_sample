@@ -3,6 +3,7 @@
     position: relative;
     display: block;
     border-bottom: .1px solid #333333;
+    z-index: 5;
 }
 
 #header .container {
@@ -10,16 +11,48 @@
     height: 10rem;
 }
 
+.header-left,
+.header-right-top,
+.header-right-bottom {
+    display: flex;
+    align-items: center;
+}
+
 .header-left {
     position: absolute;
     left: 2rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 15rem;
-    height: 10rem;
+}
+
+.page-nav {
+    position: relative;
+    display: block;
+}
+
+.page-nav li {
+    position: relative;
+    float: left;
+    padding: 1rem 0 1rem 4rem;
+}
+
+.page-nav li::before {
+    content: '\f054';
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-40%);
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.page-nav li a {
+    text-decoration: underline;
 }
 
 .logo {
+    width: 15rem;
+    height: 10rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 3.2rem;
     font-weight: 700;
@@ -36,8 +69,6 @@
 
 .header-right-top,
 .header-right-bottom {
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
     height: 50%;
 }
@@ -45,12 +76,16 @@
 .box-search input {
     border-radius: 1rem;
     padding: .3rem 2rem;
-    margin-right: 1rem;
 }
 
-.box-search button {
+.box-search input::placeholder {
+    font-size: 1.2rem;
+}
+
+.header-right-top button {
     background: none;
     border: none;
+    padding: 1rem;
     font-size: 1.6rem;
     cursor: pointer;
 }
@@ -59,6 +94,7 @@
     display: flex;
     justify-content: space-between;
     width: 50rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Footer */

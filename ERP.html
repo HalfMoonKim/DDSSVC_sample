@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
     content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>#</title>
+  <title>ERP</title>
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,7 @@
 </head>
 
 <body>
-  <div id="wrapper" style="display: flex; flex-direction: column; justify-content: space-between;">
+  <div id="wrapper" style="width: 100vw; height: 100vh;">
     <!-- Header -->
     <header id="header">
       <div class="container">
@@ -51,14 +51,17 @@
                 <button><i class="fas fa-search"></i></button>
               </div>
             </form>
+            <button class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+            </button>
           </div>
           <div class="header-right-bottom">
             <nav class="gnb">
               <ul>
-                <li><a href="./ERP.html">Home</a></li>
-                <li><a href="./Service.html">Customer</a></li>
-                <li><a href="./ERP.html">Supplier</a></li>
-                <li><a href="./UserPay.html">Employees</a></li>
+                <li><a href="./ERP.html" target="_blank">Home</a></li>
+                <li><a href="./Service.html" target="_blank">Customer</a></li>
+                <li><a href="./ERP.html" target="_blank">Supplier</a></li>
+                <li><a href="./UserPay.html" target="_blank">Employees</a></li>
               </ul>
             </nav>
           </div>
@@ -68,28 +71,28 @@
     <!-- // Header -->
 
     <!-- Main -->
-    <section id="home-main">
+    <section id="erp-main">
       <div class="container">
-        <div class="home-box">
+        <div class="erp-box">
           <button class="nav-customizing"><i class="fas fa-cog"></i></button>
-          <div class="swiper home-menu-slide">
-            <div class="swiper-wrapper home-nav">
-              <div class="swiper-slide home-menu">
+          <div class="swiper erp-menu-slide">
+            <div class="swiper-wrapper erp-nav">
+              <div class="swiper-slide erp-menu">
                 <button class="tree-open">My Pages</button>
               </div>
-              <div class="swiper-slide home-menu">
+              <div class="swiper-slide erp-menu">
                 <button class="tree-open">A</button>
               </div>
-              <div class="swiper-slide home-menu">
+              <div class="swiper-slide erp-menu">
                 <button class="tree-open">B</button>
               </div>
-              <div class="swiper-slide home-menu">
+              <div class="swiper-slide erp-menu">
                 <button class="tree-open">C</button>
               </div>
-              <div class="swiper-slide home-menu">
+              <div class="swiper-slide erp-menu">
                 <button class="tree-open">D</button>
               </div>
-              <div class="swiper-slide home-menu">
+              <div class="swiper-slide erp-menu">
                 <button class="tree-open">E</button>
               </div>
             </div>
@@ -99,29 +102,67 @@
           <div class="swiper-button-next"></div>
         </div>
         <ul class="tree-box">
-          <li class="tree-list">
+          <li class="tree-content">
             <p class="tree-title">My Pages</p>
-            <div id="tree"></div>
+            <ul class="tree">
+              <li>
+                <a href="./ERP/MyPages/BasicMenu.html" target="_blank">기본메뉴</a>
+              </li>
+            </ul>
           </li>
-          <li class="tree-list">
+          <li class="tree-content">
             <p class="tree-title">A</p>
-            <div id="tree02"></div>
+            <ul class="tree">
+              <li>
+                <button>A1</button>
+                <ul class="tree-ul">
+                  <li><a href="./ERP/A/A1/A1-1.html" target="_blank">A1-1</a></li>
+                  <li>
+                    <button>A1-2</button>
+                    <ul class="tree-ul">
+                      <li><a href="./ERP/A/A1/A1-2/A1-2-1.html" target="_blank">A1-2-1</a></li>
+                      <li>
+                        <button>A1-2-2</button>
+                        <ul class="tree-ul">
+                          <li><a href="./ERP/A/A1/A1-2/A1-2-2/A1-2-2-1.html" target="_blank">A1-2-2-1</a></li>
+                          <li><a href="./ERP/A/A1/A1-2/A1-2-2/A1-2-2-2.html" target="_blank">A1-2-2-2</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="./ERP/A/A1/A1-2/A1-2-3.html" target="_blank">A1-2-3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="./ERP/A/A1/A1-3.html" target="_blank">A1-3</a></li>
+                </ul>
+              </li>
+              <li><a href="./ERP/A/A2.html" target="_blank">A2</a></li>
+              <li>
+                <button>A3</button>
+                <ul class="tree-ul">
+                  <li><a href="./ERP/A/A3/A3-1.html" target="_blank">A3-1</a></li>
+                  <li><a href="./ERP/A/A3/A3-2.html" target="_blank">A3-2</a></li>
+                </ul>
+              </li>
+            </ul>
           </li>
-          <li class="tree-list">
+          <li class="tree-content">
             <p class="tree-title">B</p>
-            <div id="tree03"></div>
+            <ul class="tree">
+              <li>
+                <button>B1</button>
+                <ul class="tree-ul">
+                  <li><a href="./ERP/B/B1/B1-1.html" target="_blank">B1-1</a></li>
+                </ul>
+              </li>
+            </ul>
           </li>
-          <li class="tree-list">
+          <li class="tree-content">
             <p class="tree-title">C</p>
-            <div id="tree04"></div>
           </li>
-          <li class="tree-list">
+          <li class="tree-content">
             <p class="tree-title">D</p>
-            <div id="tree05"></div>
           </li>
-          <li class="tree-list">
+          <li class="tree-content">
             <p class="tree-title">E</p>
-            <div id="tree06"></div>
           </li>
         </ul>
       </div>
