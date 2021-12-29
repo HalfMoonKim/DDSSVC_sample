@@ -78,11 +78,6 @@ body {
     margin: 0 auto;
 }
 
-.swiper-wrapper {
-    width: 100%;
-    height: 100%;
-}
-
 .clearfix::after {
     content: '';
     display: block;
@@ -92,25 +87,36 @@ body {
 
 /* Tree Menu */
 .tree-open {
+    position: relative;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 10rem;
+    height: 3rem;
     background: none;
     border: none;
+    margin: 2rem auto;
     cursor: pointer;
 }
 
+.tree-open::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1rem;
+    height: .3rem;
+    width: 5rem;
+    background: #333;
+    transition: .3s ease-in-out;
+}
+
+.tree-open:hover::after {
+    transform: translateX(-50%) skewX(30deg);
+    width: 7rem;
+}
+
 .tree-box {
-    position: relative;
     display: block;
-    max-width: 60rem;
-    max-height: 39.8rem;
-    background: #fff;
-    border: .1rem solid #333;
-    padding: 5rem 10rem;
-    margin: 5rem auto 0;
     text-align: left;
-    box-shadow: 0 .1rem 1rem .1rem rgb(0 0 0 / 20%), 0 .1rem .2rem rgb(60 60 60 / 15%);
     overflow-y: scroll;
 }
 
@@ -133,43 +139,9 @@ body {
     width: 100%;
 }
 
-.tree button,
-.tree a {
-    display: block;
-    width: 100%;
-    height: 2rem;
-    border: none;
-    background: none;
-    margin-left: 3rem;
-    cursor: pointer;
-    font-size: 1.6rem;
-    text-align: left;
-    line-height: 1.25;
-    transition: .3s ease;
-}
-
-.tree button:hover,
-.tree a:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.tree-ul {
-    height: 0;
-    padding-left: 1.7rem;
-    opacity: 0;
-    overflow: hidden;
-    transition: .3s ease;
-}
-
-.tree li.unfold>.tree-ul {
-    opacity: 1;
-    height: 100% !important;
-}
-
 .tree li {
     position: relative;
     width: 100%;
-    min-height: 2.3rem;
     padding-left: 1rem;
     line-height: 2.3rem;
 }
@@ -180,15 +152,26 @@ body {
     position: absolute;
 }
 
+.tree-ul {
+    height: 0;
+    padding-left: 1.7rem;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.tree li.unfold>.tree-ul {
+    opacity: 1;
+    height: 100% !important;
+}
+
 .tree li span {
     position: absolute;
-    top: .2rem;
-    left: 2rem;
+    top: .7rem;
+    left: 1rem;
     width: 1.7rem;
     height: 1.7rem;
     text-align: center;
     line-height: 1.7rem;
-    cursor: pointer;
     color: #333;
 }
 
@@ -205,8 +188,8 @@ body {
 .tree-ul li::before {
     content: '\002E';
     position: absolute;
-    left: 1rem;
-    top: -.2rem;
+    left: 0rem;
+    top: .2rem;
     font-family: "Font Awesome 5 Free";
     font-size: 1rem;
     font-weight: 900;
@@ -222,4 +205,24 @@ body {
     content: '\f2d0';
     font-family: "Font Awesome 5 Free";
     font-weight: 400;
+}
+
+.tree li button,
+.tree li a {
+    display: block;
+    width: calc(100% - 3rem);
+    height: 100%;
+    background: none;
+    border: none;
+    padding-left: 1rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    text-align: left;
+    line-height: 1.875;
+}
+
+.tree li button:hover,
+.tree li a:hover {
+    background: rgba(0, 0, 0, 0.2);
 }

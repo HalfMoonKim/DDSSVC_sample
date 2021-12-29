@@ -14,23 +14,6 @@ $(document).ready(function () {
     });
 
     // ERP Nav 기능
-    const erpMenu = new Swiper('.erp-menu-slide', {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        spaceBetween: 30,
-        touchRatio: 0,
-
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
     let tree = $('.tree');
 
     tree.each(function () {
@@ -50,13 +33,6 @@ $(document).ready(function () {
             }
         });
     });
-
-    for (let i = 0; i <= $('.tree-open').length; i++) {
-        let treeCont = $('.tree-content');
-
-        $('.tree-open').eq(i).click(function () {
-            treeCont.stop().hide();
-            treeCont.eq(i).stop().fadeIn();
-        });
-    };
+    
+    
 });
