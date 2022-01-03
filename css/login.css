@@ -9,7 +9,6 @@
 }
 
 .login-version {
-  font-family: 'Montserrat', sans-serif;
   margin-bottom: 2rem;
 }
 
@@ -31,17 +30,20 @@
   min-height: 40rem;
   border-radius: 0.5rem;
   padding: 3rem 6rem;
-  box-shadow: 0 .1rem 1rem .1rem rgb(0 0 0 / 20%), 0 .1rem .2rem rgb(60 60 60 / 15%);;
+  box-shadow: 0 .1rem 1rem .1rem #91C788, 0 .1rem .2rem #FEFFDE;
 }
 
 .login-box-logo {
   position: relative;
   width: 100%;
   vertical-align: middle;
-  font-family: 'Montserrat', sans-serif;
   font-size: 5rem;
   font-weight: 700;
   text-align: center;
+}
+
+.login-logo:hover {
+  color: #52734D  
 }
 
 .login-version,
@@ -63,16 +65,11 @@
   text-align: center;
 }
 
-.radio-label {
-  font-family: 'Montserrat', sans-serif;
-}
-
 .login-input-label {
   position: relative;
   display: inline-block;
   width: 10rem;
   vertical-align: middle;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .login-input-label::after {
@@ -112,13 +109,12 @@
   border: .1rem solid #333333;
   margin-top: 1rem;
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
   line-height: 2.5;
   font-weight: 700;
 }
 
 .input-submit:hover {
-  box-shadow: 0 .1rem 1rem .1rem rgb(0 0 0 / 20%), 0 .1rem .2rem rgb(60 60 60 / 15%);;
+  box-shadow: 0 .1rem 1rem .1rem #91C788, 0 .1rem .2rem #FEFFDE;
 }
 
 .login-footer {

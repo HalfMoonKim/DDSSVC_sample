@@ -1,7 +1,6 @@
 @charset "utf-8";
+@import url('./fonts/fonts.css');
 @import url('./layout.css');
-@import url('./login.css');
-@import url('./ERP.css');
 
 * {
     margin: 0;
@@ -10,13 +9,13 @@
     outline-style: none;
 }
 
-html {
-    font-size: 10px;
+a {
+    color: #777;
+    text-decoration: none;
 }
 
-a {
-    color: #333333;
-    text-decoration: none;
+button {
+    color: #777;
 }
 
 img {
@@ -34,9 +33,14 @@ input::placeholder {
     color: #c5c5c5;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
     font-size: 1.6rem;
+    color: #000;
     font-weight: 400;
     line-height: normal;
     letter-spacing: normal;
@@ -50,7 +54,6 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -63,7 +66,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 0.1rem;
-    background: #e3e3e3;
+    background: #91C788;
 }
 
 ::-webkit-scrollbar-button {
@@ -85,144 +88,32 @@ body {
     clear: both;
 }
 
-/* Tree Menu */
-.tree-open {
-    position: relative;
-    display: block;
-    width: 10rem;
-    height: 3rem;
-    background: none;
-    border: none;
-    margin: 2rem auto;
-    cursor: pointer;
-}
-
-.tree-open::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -1rem;
-    height: .3rem;
-    width: 5rem;
-    background: #333;
-    transition: .3s ease-in-out;
-}
-
-.tree-open:hover::after {
-    transform: translateX(-50%) skewX(30deg);
-    width: 7rem;
-}
-
-.tree-box {
-    display: block;
-    text-align: left;
-    overflow-y: scroll;
-}
-
-.tree-content {
+.black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
     display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 5;
 }
 
-.tree-content:first-child {
-    display: block;
+/* Tree Menu */
+ul.fancytree-container {
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
 }
 
-.tree-title {
-    display: inline-block;
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-}
-
-.tree {
-    width: 100%;
-}
-
-.tree li {
-    position: relative;
-    width: 100%;
-    padding-left: 1rem;
-    line-height: 2.3rem;
-}
-
-.tree li::before,
-.tree li::after {
-    content: '';
-    position: absolute;
-}
-
-.tree-ul {
-    height: 0;
-    padding-left: 1.7rem;
-    opacity: 0;
-    overflow: hidden;
-}
-
-.tree li.unfold>.tree-ul {
-    opacity: 1;
-    height: 100% !important;
-}
-
-.tree li span {
-    position: absolute;
-    top: .7rem;
-    left: 1rem;
-    width: 1.7rem;
-    height: 1.7rem;
-    text-align: center;
-    line-height: 1.7rem;
-    color: #333;
-}
-
-.tree li.final span {
-    cursor: default;
-}
-
-.tree li span::before {
-    content: '\f07b';
-    font-family: "Font Awesome 5 Free";
-    font-weight: 400;
-}
-
-.tree-ul li::before {
-    content: '\002E';
-    position: absolute;
-    left: 0rem;
-    top: .2rem;
-    font-family: "Font Awesome 5 Free";
-    font-size: 1rem;
-    font-weight: 900;
-}
-
-.tree li.unfold>span::before {
-    content: '\f07c';
-    font-family: "Font Awesome 5 Free";
-    font-weight: 400;
-}
-
-.tree li.final span::before {
-    content: '\f2d0';
-    font-family: "Font Awesome 5 Free";
-    font-weight: 400;
-}
-
-.tree li button,
-.tree li a {
-    display: block;
-    width: calc(100% - 3rem);
-    height: 100%;
-    background: none;
+.main-tree ul.fancytree-container {
     border: none;
-    padding-left: 1rem;
-    margin-left: 2rem;
-    cursor: pointer;
     font-size: 1.6rem;
-    text-align: left;
-    line-height: 1.875;
 }
 
-.tree li button:hover,
-.tree li a:hover {
-    background: rgba(0, 0, 0, 0.2);
+.main-tree span.fancytree-icon,
+.main-tree span.fancytree-expander {
+    margin-top: 0.6rem;
+}
+
+.main-tree span.fancytree-checkbox {
+    margin-top: 0.6rem;
 }

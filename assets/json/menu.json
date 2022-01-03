@@ -1,0 +1,79 @@
+[{
+    "title": "My Pages",
+    "expended": false,
+    "folder": true,
+    "children": [{
+        "title": "<a href='../ERP/MyPages/BasicMenu.html'>기본메뉴</a>"
+    }]
+}, {
+    "title": "재고 I",
+    "expended": false,
+    "folder": true,
+    "children": [{
+        "title": "기초등록",
+        "expended": false,
+        "folder": true,
+        "children": [{
+            "title": "<a href='#'>거래처등록</a>"
+        }, {
+            "title": "<a href='#'>창고등록</a>"
+        }, {
+            "title": "<a href='#'>부서등록</a>"
+        }, {
+            "title": "<a href='#'>프로젝트등록</a>"
+        }, {
+            "title": "<a href='#'>품목등록</a>"
+        }, {
+            "title": "<a href='#'>관리항목등록</a>"
+        }, {
+            "title": "단가관리",
+            "expended": false,
+            "folder": true,
+            "children": [{
+                "title": "<a href='#'>단가적용순서설정</a>"
+            }, {
+                "title": "<a href='#'>특별단가등록</a>"
+            }, {
+                "title": "<a href='#'>거래처특별단가그룹등록</a>"
+            }, {
+                "title": "<a href='#'>품목별단가</a>"
+            }]
+        }, {
+            "title": "<a href='#'>사원(담당)등록</a>"
+        }, {
+            "title": "<a href='#'>인쇄용결재라인등록(재고)</a>"
+        }, {
+            "title": "<a href='#'>외화등록</a>"
+        }, {
+            "title": "<a href='#'>각종코드변경</a>"
+        }]
+    }, {
+        "title": "견적서",
+        "expended": false,
+        "folder": true,
+        "children": [{
+            "title": "<a href='#'>견적서조회</a>"
+        }, {
+            "title": "<a href='#'>견적서입력</a>"
+        }, {
+            "title": "<a href='#'>견적서현황</a>"
+        }, {
+            "title": "<a href='#'>미주문현황</a>"
+        }]
+    }, {
+        "title": "주문서",
+        "expended": false,
+        "folder": true,
+        "children": [{
+            "title": "<a href='#'>주문서조회</a>"
+        }, {
+            "title": "<a href='#'>주문서입력</a>"
+        }, {
+            "title": "<a href='#'>주문서현황</a>"
+        }, {
+            "title": "<a href='#'>주문서출고처리</a>"
+        }, {
+            "title": "<a href='#'>미판매현황</a>"
+        }]
+    }]
+}]

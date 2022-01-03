@@ -1,0 +1,136 @@
+/* Main */
+#main {
+  position: relative;
+  display: block;
+}
+
+.main-box {
+  position: relative;
+  height: 50rem;
+  margin: 0 2rem;
+  box-shadow: 0 .1rem 1rem .1rem #91C788, 0 .1rem .2rem #FEFFDE;
+}
+
+.menu-custom-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.main-box-left,
+.main-box-right {
+  position: relative;
+  float: left;
+  height: 100%;
+  padding: 5rem;
+}
+
+.main-box-left {
+  width: 20%;
+  background: #DDFFBC;
+}
+
+.main-box-right {
+  width: 80%;
+  overflow-y: scroll;
+}
+
+/* Main Tree Menu */
+.main-tree-menu li {
+  position: relative;
+  display: block;
+  height: 5rem;
+  transition: 0.3s ease;
+}
+
+.main-tree-menu li:hover {
+  background: rgba(82, 115, 77, .5);
+}
+
+.main-tree-menu li:hover >button {
+  color: #FEFFDE;
+}
+
+.main-tree-open {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  border-bottom: .1rem solid #52734D;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.875;
+}
+
+.main-tree-box {
+  display: block;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.main-tree-content {
+  display: none;
+}
+
+.main-tree-content:first-child {
+  display: block;
+}
+
+.main-tree-title {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+/* Menu-customizing */
+.menu-custom {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+  min-width: 50rem;
+  max-width: 100rem;
+  height: 80vh;
+  background: #fff;
+  box-shadow: 0 .1rem 1rem .1rem #91C788, 0 .1rem .2rem #FEFFDE;
+  z-index: 6;
+  overflow-y: scroll;
+}
+
+.custom-top {
+  position: relative;
+  display: block;
+  padding: 2rem;
+}
+
+.custom-title {
+  font-size: 2.4rem;
+}
+
+.custom-bottom {
+  padding: 2rem;
+}
+
+.custom-close {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2.4rem;
+  background: none;
+  border: .1rem solid #91C788;
+}
+
+.custom-close:hover {
+  background: #91C788;
+  color: #fff;
+}

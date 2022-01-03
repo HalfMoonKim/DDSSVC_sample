@@ -4,8 +4,8 @@ $(document).ready(function () {
         let groupVal = $('input[name=group]:checked').val();
         let loginForm = $('.login-form');
 
-        if (groupVal === "erp") {
-            loginForm.attr("action", "./home/ERP.html");
+        if (groupVal === "main") {
+            loginForm.attr("action", "./home/Main.html");
         } else if (groupVal === "service") {
             loginForm.attr("action", "./home/Service.html");
         } else if (groupVal === "userPay") {
@@ -13,26 +13,70 @@ $(document).ready(function () {
         };
     });
 
-    // ERP Nav 기능
-    let tree = $('.tree');
+    // Main Tree Menu
+    $.ajax({
+        url: '../assets/json/menu.json',
+        type: 'GET',
+        dataType: 'json',
+    }).done(function (group) {
+        $.each(group, function (inext, item) {
+            // Main Menu
+            $('.main-tree-menu').append(`
+            <li>
+                <button class="main-tree-open">
+                    ${item.title}
+                </button>
+            </li>
+            `);
 
-    tree.each(function () {
-        $(this).find('li').each(function () {
-            $(this).append('<span></span>');
-            if (!$(this).children('ul').length) {
-                $(this).addClass('final');
-            } else if ($(this).is(':last-child')) {
-                $(this).addClass('last');
-            }
+            $('.main-tree-box').append(`
+            <li class="main-tree-content">
+                <p class="main-tree-title">${item.title}</p>
+                <div class="main-tree"></div>
+            </li>
+            `);
+
+            $(".main-tree").fancytree({
+                clickFolderMode: 2,
+                source: item.children,
+                cache: true
+            });
         });
-        $(this).find('button').on('click', function () {
-            if ($(this).parent('li').hasClass('unfold')) {
-                $(this).parent('li').removeClass('unfold');
-            } else {
-                $(this).parent('li').addClass('unfold');
-            }
+
+        for (let i = 0; i <= $('.main-tree-open').length; i++) {
+            let treeCont = $('.main-tree-content');
+            $('.main-tree-open').eq(i).click(function () {
+                treeCont.stop().hide();
+                treeCont.eq(i).stop().fadeIn();
+            });
+        };
+    });
+
+    // Main menu Customizing
+    $('.menu-custom-btn').on('click', function () {
+        $('.black-bg').stop().fadeIn();
+        $('.menu-custom').stop().fadeIn();
+    });
+    $('.custom-close').on('click', function () {
+        $('.black-bg').stop().fadeOut();
+        $('.menu-custom').stop().fadeOut();
+    });
+    $('.black-bg').on('click', function () {
+        $('.black-bg').stop().fadeOut();
+        $('.menu-custom').stop().fadeOut();
+    });
+
+    $.ajax({
+        url: '../assets/json/menuData.json',
+        type: 'GET',
+        dataType: 'json',
+    }).done(function (group) {
+
+        $(".custom-tree").fancytree({
+            clickFolderMode: 2,
+            source: group,
+            checkbox: true,
+            cache: true
         });
     });
-    
-    
 });

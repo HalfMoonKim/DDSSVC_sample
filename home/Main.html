@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Main</title>
+
+  <!-- Script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+  <script src="https://kit.fontawesome.com/af449e2132.js" crossorigin="anonymous"></script>
+  <script src="../js/jquery.fancytree-all-deps.js"></script>
+  <!-- // Script -->
+
+  <!-- Style -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery.fancytree/2.27.0/skin-win8/ui.fancytree.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- // Style -->
+
+  <script src="../js/common.js"></script>
+</head>
+
+<body>
+  <div id="wrapper" style="height: 100vh;">
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <div class="header-left">
+          <a href="./Main.html" class="logo">DDS SVC</a>
+        </div>
+        <div class="header-right">
+          <div class="header-right-top">
+            <div class="user-menu clearfix">
+              <form name="searchForm">
+                <input type="text" placeholder="무엇이든 검색하세요.">
+                <button><i class="fas fa-search"></i></button>
+              </form>
+              <a class="logout" href="../index.html">
+                <i class="fas fa-sign-out-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="header-right-bottom">
+            <nav class="gnb">
+              <ul>
+                <li><a href="./Main.html">Home</a></li>
+                <li><a href="./Service.html">Customer</a></li>
+                <li><a href="./Main.html">Supplier</a></li>
+                <li><a href="./UserPay.html">Employees</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- // Header -->
+
+    <!-- Main -->
+    <section id="main">
+      <div class="container">
+        <div class="main-box clearfix">
+
+          <!-- Main Menu -->
+          <div class="main-box-left">
+            <button class="menu-custom-btn"><i class="fas fa-cog"></i></button>
+            <ul class="main-tree-menu">
+            </ul>
+          </div>
+          <!-- Main Menu -->
+
+          <!-- Tree Menu -->
+          <div class="main-box-right">
+            <ul class="main-tree-box"></ul>
+          </div>
+          <!-- //Tree Menu -->
+
+          <!-- Tree Customizing -->
+          <div class="menu-custom">
+            <div class="custom-top">
+              <p class="custom-title">개인 메뉴 설정</p>
+              <button class="custom-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="custom-bottom">
+              <p class="custom-tree-title">전체 메뉴</p>
+              <div class="custom-tree"></div>
+            </div>
+          </div>
+          <!-- // Tree Customizing -->
+
+        </div>
+      </div>
+    </section>
+    <div class="black-bg"></div>
+    <!-- // Main -->
+
+    <!-- Footer -->
+    <Footer id="footer">
+      <div class="container">
+        <div class="copy">
+          <p>Copyright © (주)도들샘. All rights reserved.</p>
+        </div>
+      </div>
+    </Footer>
+    <!-- // Footer -->
+  </div>
+</body>
+
+</html>

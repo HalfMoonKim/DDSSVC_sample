@@ -2,7 +2,7 @@
 #header {
     position: relative;
     display: block;
-    border-bottom: .1px solid #333333;
+    background: rgba(146, 200, 137, 0.8);
     z-index: 5;
 }
 
@@ -53,11 +53,15 @@
 .logo {
     width: 15rem;
     height: 10rem;
-    font-family: 'Montserrat', sans-serif;
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 3.125;
     text-align: center;
+    transition: .3s;
+}
+
+.logo:hover {
+    color: #52734D
 }
 
 .header-right {
@@ -73,35 +77,102 @@
     height: 50%;
 }
 
-.box-search input {
-    border-radius: 1rem;
-    padding: .3rem 2rem;
+.user-menu {
+    position: relative;
 }
 
-.box-search input::placeholder {
+.user-menu form {
+    float: left;
+    height: 3rem;
+}
+
+.user-menu form input {
+    height: 100%;
+    border: .1rem solid #52734D;
+    padding: .3rem 1rem;
+}
+
+.user-menu form input::placeholder {
     font-size: 1.2rem;
+    line-height: 2.5;
 }
 
-.header-right-top button {
-    background: none;
+.user-menu button {
+    position: relative;
+    display: block;
+    float: right;
+    width: 3rem;
+    height: 3rem;
+    background: #52734D;
+    color: #fff;
     border: none;
-    padding: 1rem;
-    font-size: 1.6rem;
     cursor: pointer;
+}
+
+.logout {
+    position: relative;
+    display: block;
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+}
+
+.user-menu button>i,
+.logout>i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logout>i {
+    color: #52734D
+}
+
+.user-menu button:hover,
+.logout:hover > i {
+    color: #91C788;
+}
+
+.gnb {
+    height: 100%;
 }
 
 .gnb ul {
     display: flex;
     justify-content: space-between;
     width: 50rem;
-    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+.gnb ul>li {
+    position: relative;
+    text-align: center;
+    width: 25%;
+    box-shadow: 0 0 .1rem 0 #FEFFDE
+
+}
+
+.gnb ul>li>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 3;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.gnb ul>li:hover>a {
+    background: rgba(82, 115, 77, 0.5);
+    color: #FEFFDE;
 }
 
 /* Footer */
 #footer {
     position: relative;
     display: block;
-    border-top: .1px solid #333333;
+    box-shadow: 0 .1rem 1rem .1rem #91C788, 0 .1rem .2rem #91C788;
 }
 
 #footer .container {
